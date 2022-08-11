@@ -1,16 +1,36 @@
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 class Hello {
 
     public static void main(String[] args) {
-        int n = 7;
+        ArrayList<String> arr = new ArrayList<>();
+        
+        // add item to array
+        arr.add("cong dat");
+        arr.add("cong doan");
+        arr.add("cong dinh");
+        arr.add("thi khiem");
 
-        while(n >= 10) {
-            n = (int) (Math.pow(n%10, 2) + Math.pow(n/10,2)); 
-            System.out.println(n);
+        // remove item 
+        arr.remove(0);
 
-            // if(n % 100 == 0) {
-            //     System.out.println("Happy");
-            //     break;
-            // }
+        // access to item 
+        arr.get(0);
+
+        // change item 
+        arr.set(2, "cong cong");
+
+        // remove all item 
+        // arr.clear();
+
+        // get size
+
+        // arr.size();
+
+        for(String i : arr) {
+            System.out.println(i);
         }
+        
     }
 }

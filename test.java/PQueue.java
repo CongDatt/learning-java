@@ -1,10 +1,9 @@
-import java.sql.Connection;
-import java.util.LinkedList;
 import java.util.Queue;
+import java.util.PriorityQueue;
 
-public class test {
+public class PQueue {
     public static void main(String[] args) {
-        Queue<String> danhsachSv = new LinkedList<String>();
+        Queue<String> danhsachSv = new PriorityQueue<String>();
 
         // Add to queue
         danhsachSv.offer("Cong dat 1");

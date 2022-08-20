@@ -2,7 +2,7 @@ import java.sql.Connection;
 
 public class test {
     public static void main(String[] args) {
-        Connection connection = JDBCUtil.getConnection();
-        System.out.println(connection);
+        Box a = new Box<Integer>(10);
+        System.out.println(a.getValue());
     }
 }

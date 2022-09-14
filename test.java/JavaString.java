@@ -6,5 +6,6 @@ public class JavaString {
 
         System.out.println(a == aa); // true
         System.out.println(a == a2); // false
+        // testing
     }
 }

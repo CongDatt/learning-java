@@ -12,5 +12,12 @@ public class test {
         for (String user : users) {
             System.out.println(user);
         }
+
+        myGenerics<String> a = new myGenerics<String>("string a");
+        myGenerics<Integer> aNum = new myGenerics<>(10);
+
+        System.out.println(a.getValue());
+        System.out.println(aNum.getValue());
+
     }
 }

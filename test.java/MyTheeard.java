@@ -1,3 +1,5 @@
+import java.util.SimpleTimeZone;
+
 class Hello implements Runnable {
     public void run() {
         for(int i = 0; i < 5; i ++) {
@@ -9,7 +11,7 @@ class Hello implements Runnable {
     }
 }
 
-class Hi extends Thread {
+class Hi implements Runnable {
     public void run() {
         for(int i = 0; i < 5; i ++) {
             System.out.println("hi");
@@ -22,13 +24,22 @@ class Hi extends Thread {
 
 
 public class MyTheeard {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Hello hello = new Hello();
         Hi hi = new Hi();
 
         Thread t1 = new Thread(hello);
-        t1.start();
-        hi.start();
+        Thread t2 = new Thread(hi);
 
+
+        t1.start();
+        t2.start();
+
+        System.out.println(t1.isAlive());
+
+        t1.join();
+        t2.join();
+
+        System.out.println(t1.isAlive());
     }
 }
